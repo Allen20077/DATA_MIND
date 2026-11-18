@@ -15,3 +15,5 @@ sqlalchemy
 psycopg[binary]
 pytest
 httpx
+plotly
+python-docx
