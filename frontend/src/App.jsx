@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { Analytics } from "@vercel/analytics/react";
 import {
   Activity, ArrowUpRight, BarChart3, Bell, Bot,
   BrainCircuit, ChevronDown, ChevronRight, CircleHelp,
@@ -305,7 +306,9 @@ const result = await askAgent(text, datasetContext);
   }
 
   return (
-    <div className="app-shell">
+    <>
+      <Analytics />
+      <div className="app-shell">
 
       {sidebarOpen && (
         <button
@@ -666,6 +669,7 @@ savedReports={savedReports}
         </div>
       </main>
     </div>
+    </>
   );
 }
 function AuthPage({ mode, navigate }) {
