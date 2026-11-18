@@ -1,2 +1,27 @@
+[project]
+name = "datamind-backend"
+version = "1.0.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "python-multipart",
+    "pandas",
+    "numpy",
+    "openpyxl",
+    "scikit-learn",
+    "scipy",
+    "plotly",
+    "google-genai",
+    "python-docx",
+    "pydantic",
+    "pydantic-settings",
+    "python-dotenv",
+    "sqlalchemy",
+    "psycopg[binary]",
+    "pytest",
+    "httpx"
+]
+
 [tool.vercel]
-entrypoint = "main:app"
+entrypoint = "main.py"
